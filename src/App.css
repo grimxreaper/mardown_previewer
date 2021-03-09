@@ -13,3 +13,34 @@ textarea, .preview {
 .preview img {
   max-width: 100%;
 }
+
+h1 {
+  color: rgb(37, 33, 33);
+  text-shadow: 1px 1px 4px #b18be6;
+  margin-bottom: 20px;
+}
+
+h5, h1 {
+  font-family: 'Baloo 2', cursive;
+}
+
+.preview blockquote {
+  font-family: 'Baloo 2', cursive;
+}
+
+blockquote p:last-child {
+  font-size: 17px;
+}
+
+.preview li {
+  font-size: 12px;
+}
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 13px;
+}
