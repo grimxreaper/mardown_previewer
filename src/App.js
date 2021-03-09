@@ -4,12 +4,41 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import marked from 'marked';
 
+const initialState = `
+  This is a paragraph
+  **This is bolded text**
+
+  # Heading 1
+  ## Heading 2
+
+  [choose a color here](https://flatuicolors.com/palette/ca)
+
+  This is an inline \`<div></div>\`
+  This is a block of code:
+
+  \`\`\`
+    let z = 'zahra';
+    let y = 'yael';
+    let f = z + y;
+  \`\`\`
+
+  - strawberry mochi
+  - heart filled macaroons
+    - coconut water
+
+  ![Image](https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg)
+
+  > When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto
+
+
+`;
+
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      text: ""
+      text: initialState
     }
   }
 
@@ -21,12 +50,10 @@ handleChange = (event) => {
   })
 }
 
-
-
   render() {
     const { text } = this.state; //what does this do again?
 
-    const markdown = marked(text);
+    const markdown = marked(text, {breaks: true});
     return(
     <div>
       <h1 className="text-center mt-4">Convert Your Markdown!</h1>
@@ -42,12 +69,9 @@ handleChange = (event) => {
       />
       </div>
 
-      <div
-        id="preview"
-        className="col-6"
-      >
+      <div className="col-6">
         <h5 className="text-center">See the result:</h5>
-        <div className="preview rounded p-2"
+        <div id="preview" className="preview rounded p-2"
         dangerouslySetInnerHTML={{__html: markdown}}/>
         
         </div>
