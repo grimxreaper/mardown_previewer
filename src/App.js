@@ -4,14 +4,28 @@ class App extends React.Component {
   constructor(props) {
     super(props)
 
-
+    state = {
+      edit: true
+    }
   }
+
+handleChange = () => {
+  //when text is entered into the editor element
+  this.setState(() => ({
+    edit: !state.edit //update preview element
+    
+  }))
+}
+
+
+
   render() {
     <div>
       <textarea
         id="editor"
 
-        //react save textarea text
+        //trigger a change event here, and update the state of preview to render
+        //what was written in the editor as html
 
       ></textarea>
       {/* When I enter text into the #editor element, the #preview element
@@ -25,7 +39,7 @@ the text is rendered as HTML in the #preview element as I type. */}
         {//result of preview
         }
 
-
+;
       </div>
     </div>
   }
