@@ -5,3 +5,7 @@ body {
 .preview {
   background-color: white;
 }
+
+textarea, .preview {
+  min-height: 400px;
+}
