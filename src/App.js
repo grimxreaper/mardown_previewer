@@ -35,7 +35,7 @@ handleChange = (event) => {
           <h5 className="text-center">Enter your markdown here:</h5>
 
       <textarea
-        className="form-control"
+        className="form-control p-2"
         id="editor"
         value={text}
         onChange={this.handleChange}
@@ -47,12 +47,13 @@ handleChange = (event) => {
         className="col-6"
       >
         <h5 className="text-center">See the result:</h5>
-        <div className="preview rounded">
-        <p> dfsdfsdfsf </p>
+        <div className="preview rounded p-2"
+        dangerouslySetInnerHTML={{__html: markdown}}/>
+        
         </div>
       </div>
     </div>
-    </div>
+ 
 
 
     )}
