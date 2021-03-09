@@ -1,8 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import marked from 'marked';
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import marked from "marked";
 
 const initialState = `
   This is a paragraph
@@ -35,54 +35,51 @@ const initialState = `
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      text: initialState
-    }
+      text: initialState,
+    };
   }
 
-handleChange = (event) => {
-  //when text is entered into the editor element
-  this.setState({
-    text: event.target.value //update preview element
-    
-  })
-}
+  handleChange = (event) => {
+    this.setState({
+      text: event.target.value,
+    });
+  };
 
   render() {
-    const { text } = this.state; //what does this do again?
+    const { text } = this.state;
 
-    const markdown = marked(text, {breaks: true});
-    return(
-    <div>
-      <h1 className="text-center mt-4">Convert Your Markdown!</h1>
-      <div className="row">
-        <div className="col-6">
-          <h5 className="text-center">Enter your markdown here:</h5>
+    const markdown = marked(text, { breaks: true });
+    return (
+      <div>
+        <h1 className="text-center mt-4">Convert Your Markdown!</h1>
+        <div className="row">
+          <div className="col-6">
+            <h5 className="text-center">Enter your markdown here:</h5>
 
-      <textarea
-        className="form-control p-2"
-        id="editor"
-        value={text}
-        onChange={this.handleChange}
-      />
-      </div>
+            <textarea
+              className="form-control p-2"
+              id="editor"
+              value={text}
+              onChange={this.handleChange}
+            />
+          </div>
 
-      <div className="col-6">
-        <h5 className="text-center">See the result:</h5>
-        <div id="preview" className="preview rounded p-2"
-        dangerouslySetInnerHTML={{__html: markdown}}/>
-        
+          <div className="col-6">
+            <h5 className="text-center">See the result:</h5>
+            <div
+              id="preview"
+              className="preview rounded p-2"
+              dangerouslySetInnerHTML={{ __html: markdown }}
+            />
+          </div>
         </div>
       </div>
-    </div>
- 
-
-
-    )}
-
+    );
+  }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));
 export default App;
