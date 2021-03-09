@@ -29,8 +29,6 @@ const initialState = `
   ![Image](https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg)
 
   > When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto
-
-
 `;
 
 class App extends Component {
@@ -38,7 +36,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      text: initialState,
+      text: initialState
     };
   }
 
