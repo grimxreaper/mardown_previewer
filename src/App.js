@@ -1,5 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 class App extends Component {
   constructor(props) {
@@ -10,10 +12,10 @@ class App extends Component {
     }
   }
 
-handleChange = (e) => {
+handleChange = (event) => {
   //when text is entered into the editor element
   this.setState({
-    markdown: e.target.value //update preview element
+    markdown: event.target.value //update preview element
     
   })
 }
@@ -27,7 +29,7 @@ handleChange = (e) => {
     <div>
       <div>Hello</div>
       <h1>markdown previewer</h1>
-      <h2>convert your markdown!</h2>
+      <h2 className="text-center">convert your markdown!</h2>
       <textarea
         id="editor"
         value={markdown}
@@ -56,7 +58,5 @@ the text is rendered as HTML in the #preview element as I type. */}
 
 }
 
-
-// ReactDOM.render(<App/>, document.getElementById('app'))
-
+ReactDOM.render(<App/>, document.getElementById('app'));
 export default App;
