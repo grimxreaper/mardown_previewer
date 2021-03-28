@@ -48,8 +48,8 @@ class App extends Component {
 
   render() {
     const { text } = this.state;
-
     const markdown = marked(text, { breaks: true });
+    
     return (
       <div>
         <h1 className="text-center mt-4">Convert Your Markdown!</h1>

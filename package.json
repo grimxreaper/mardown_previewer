@@ -1,6 +1,7 @@
 {
   "name": "mardown_previewer",
   "version": "0.1.0",
+  "homepage": "https://grimxreaper.github.io/mardown_previewer/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -16,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
