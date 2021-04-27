@@ -58,4 +58,5 @@ test('image must have correct source url', () => {
   const imageLink = 'https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg'
 
   expect(img).toHaveAttribute('src', imageLink)
+  expect(img).toHaveAttribute('alt', 'Image')
 })
