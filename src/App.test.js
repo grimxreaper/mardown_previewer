@@ -60,3 +60,11 @@ test('image must have correct source url', () => {
   expect(img).toHaveAttribute('src', imageLink)
   expect(img).toHaveAttribute('alt', 'Image')
 })
+
+test('quote renders in a blockquote format', () => {
+ const { container } = render(<App />);
+ const quote = container.querySelector('blockquote')
+
+  expect(quote).toHaveTextContent('When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto');
+
+}) 
