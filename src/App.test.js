@@ -36,7 +36,7 @@ test('contains heading 1', () => {
 
 // })
 
-test('renders heading 1 correctly', () => {
+test('renders a new heading 1 correctly', () => {
   const { getByTestID } = render(<App />);
   // const originalPreview = screen.getByLabelText('previewer').toHaveTextContent("This is a paragraph This is bolded text Heading 1 Heading 2 choose a color here This is an inline <div></div> This is a block of code: let z = 'zahra'; let y = 'yael'; let f = z + y; strawberry mochi heart filled macaroons coconut water When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto");
   // const previewer = screen.getByLabelText('previewer')
@@ -47,4 +47,10 @@ test('renders heading 1 correctly', () => {
 
   // expect(screen.getByRole('article')).toHaveTextContent("Heading 1");
 
+})
+
+test('does not render previous input of \'testing another heading 1\'', () => {
+  const { getByTestID } = render(<App />);
+  
+  expect(screen.getByRole('article')).not.toHaveTextContent('Testing Another Heading 1');
 })
