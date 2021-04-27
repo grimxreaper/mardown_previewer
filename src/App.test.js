@@ -13,11 +13,6 @@ it("matches snapshot", () => {
   });
 
 
-//a test for entering text a certain way in the editor using markdown
-//and that appearing in the previewer in the correct way
-
-//click and type text in the editor
-
 test('contains heading 1', () => {
   render(<App />)
 
@@ -37,7 +32,7 @@ test('contains heading 1', () => {
 // })
 
 test('renders a new heading 1 correctly', () => {
-  const { getByTestID } = render(<App />);
+  render(<App />);
   // const originalPreview = screen.getByLabelText('previewer').toHaveTextContent("This is a paragraph This is bolded text Heading 1 Heading 2 choose a color here This is an inline <div></div> This is a block of code: let z = 'zahra'; let y = 'yael'; let f = z + y; strawberry mochi heart filled macaroons coconut water When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto");
   // const previewer = screen.getByLabelText('previewer')
   const input = screen.getByLabelText('editor');
@@ -50,7 +45,17 @@ test('renders a new heading 1 correctly', () => {
 })
 
 test('does not render previous input of \'testing another heading 1\'', () => {
-  const { getByTestID } = render(<App />);
+  render(<App />);
   
   expect(screen.getByRole('article')).not.toHaveTextContent('Testing Another Heading 1');
+})
+
+//test img
+
+test('image must have correct source url', () => {
+  render(<App />);
+  const img = screen.getByRole('img');
+  const imageLink = 'https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg'
+
+  expect(img).toHaveAttribute('src', imageLink)
 })
