@@ -19,7 +19,7 @@ it("matches snapshot", () => {
 //click and type text in the editor
 
 test('contains heading 1', () => {
-  render(<App />);
+  render(<App />)
 
     expect(screen.getByRole('article')).toHaveTextContent("Heading 1")
 })
