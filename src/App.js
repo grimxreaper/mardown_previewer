@@ -59,6 +59,7 @@ class App extends Component {
 
             <textarea
               className="form-control p-2"
+              aria-label="editor"
               id="editor"
               value={text}
               onChange={this.handleChange}
@@ -69,6 +70,8 @@ class App extends Component {
             <h5 className="text-center">See the result:</h5>
             <div
               id="preview"
+              aria-label="previewer"
+              role="article"
               className="preview rounded p-2"
               dangerouslySetInnerHTML={{ __html: markdown }}
             />
@@ -79,5 +82,6 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+
 export default App;
+// ReactDOM.render(<App />, document.getElementById("app"));

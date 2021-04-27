@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1
+      class="text-center mt-4"
+    >
+      Convert Your Markdown!
+    </h1>
+    <div
+      class="row"
+    >
+      <div
+        class="col-6"
+      >
+        <h5
+          class="text-center"
+        >
+          Enter your markdown here:
+        </h5>
+        <textarea
+          aria-label="editor"
+          class="form-control p-2"
+          id="editor"
+        >
+            This is a paragraph
+  **This is bolded text**
+
+  # Heading 1
+  ## Heading 2
+
+  [choose a color here](https://flatuicolors.com/palette/ca)
+
+  This is an inline \`&lt;div&gt;&lt;/div&gt;\`
+  This is a block of code:
+
+  \`\`\`
+    let z = 'zahra';
+    let y = 'yael';
+    let f = z + y;
+  \`\`\`
+
+  - strawberry mochi
+  - heart filled macaroons
+    - coconut water
+
+  ![Image](https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg)
+
+  &gt; When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto
+
+        </textarea>
+      </div>
+      <div
+        class="col-6"
+      >
+        <h5
+          class="text-center"
+        >
+          See the result:
+        </h5>
+        <div
+          aria-label="previewer"
+          class="preview rounded p-2"
+          id="preview"
+          role="article"
+        >
+          <p>
+              This is a paragraph
+            <br />
+              
+            <strong>
+              This is bolded text
+            </strong>
+          </p>
+          
+
+          <h1
+            id="heading-1"
+          >
+            Heading 1
+          </h1>
+          
+
+          <h2
+            id="heading-2"
+          >
+            Heading 2
+          </h2>
+          
+
+          <p>
+              
+            <a
+              href="https://flatuicolors.com/palette/ca"
+            >
+              choose a color here
+            </a>
+          </p>
+          
+
+          <p>
+              This is an inline 
+            <code>
+              &lt;div&gt;&lt;/div&gt;
+            </code>
+            <br />
+              This is a block of code:
+          </p>
+          
+
+          <pre>
+            <code>
+                let z = 'zahra';
+  let y = 'yael';
+  let f = z + y;
+
+            </code>
+          </pre>
+          
+
+          <ul>
+            
+
+            <li>
+              strawberry mochi
+            </li>
+            
+
+            <li>
+              heart filled macaroons
+              <ul>
+                
+
+                <li>
+                  coconut water
+                </li>
+                
+
+              </ul>
+              
+
+            </li>
+            
+
+          </ul>
+          
+
+          <p>
+              
+            <img
+              alt="Image"
+              src="https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg"
+            />
+          </p>
+          
+
+          <blockquote>
+            
+
+            <p>
+              When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto
+            </p>
+            
+
+          </blockquote>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
