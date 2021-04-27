@@ -69,9 +69,14 @@ test("the hyperlink displays with correct text and link", () => {
   );
 });
 //text <li> elements
-test('displays correct amount of bullet points', () => {
-  render(<App />);
+// test('displays correct amount of bullet points', () => {
+//   render(<App />);
+//   const expected = [
+//     'strawberry mochi',
+//     'heart filled macaroons',
+//     'coconut water', 
+//     'coconut water'];
 
-  expect(document.getElementById('li')).toBeInTheDocument();
+//   expect(screen.getAllByRole('list')).toEqual(expect.arrayContaining(expected));
 
-})
+// })
