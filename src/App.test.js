@@ -4,26 +4,30 @@ import userEvent from "@testing-library/user-event";
 
 import React from "react";
 // import { StateMock } from '@react-mock/state';
-import { render, screen, fireEvent, getByLabelText } from "@testing-library/react";
+import {
+  render,
+  screen,
+  fireEvent,
+  getByLabelText,
+} from "@testing-library/react";
 
 //snapshot
 it("matches snapshot", () => {
-    const { asFragment } = render(<App />);
-    expect(asFragment(<App />)).toMatchSnapshot();
-  });
+  const { asFragment } = render(<App />);
+  expect(asFragment(<App />)).toMatchSnapshot();
+});
 
+test("contains heading 1", () => {
+  render(<App />);
 
-test('contains heading 1', () => {
-  render(<App />)
-
-    expect(screen.getByRole('article')).toHaveTextContent("Heading 1")
-})
+  expect(screen.getByRole("article")).toHaveTextContent("Heading 1");
+});
 
 // test('renders heading 1 correctly', () => {
 //   const { getByTestID } = render(<App />);
 //   const input = screen.getByLabelText('editor');
 //   const previewer = screen.getByLabelText('previewer')
-  
+
 //   fireEvent.change(input, { target: { value: '#Testing Another Heading 1'}});
 //   expect(previewer.value).toBe('#Testing Another Heading 1');
 
@@ -31,40 +35,55 @@ test('contains heading 1', () => {
 
 // })
 
-test('renders a new heading 1 correctly', () => {
+test("renders a new heading 1 correctly", () => {
   render(<App />);
   // const originalPreview = screen.getByLabelText('previewer').toHaveTextContent("This is a paragraph This is bolded text Heading 1 Heading 2 choose a color here This is an inline <div></div> This is a block of code: let z = 'zahra'; let y = 'yael'; let f = z + y; strawberry mochi heart filled macaroons coconut water When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto");
   // const previewer = screen.getByLabelText('previewer')
-  const input = screen.getByLabelText('editor');
-  
-  fireEvent.change(input, { target: { value: '# Testing Another Heading 1'}});
-  expect(screen.getByRole('article')).toHaveTextContent('Testing Another Heading 1');
+  const input = screen.getByLabelText("editor");
+
+  fireEvent.change(input, { target: { value: "# Testing Another Heading 1" } });
+  expect(screen.getByRole("article")).toHaveTextContent(
+    "Testing Another Heading 1"
+  );
 
   // expect(screen.getByRole('article')).toHaveTextContent("Heading 1");
+});
 
-})
-
-test('does not render previous input of \'testing another heading 1\'', () => {
+test("does not render previous input of 'testing another heading 1'", () => {
   render(<App />);
-  
-  expect(screen.getByRole('article')).not.toHaveTextContent('Testing Another Heading 1');
-})
+
+  expect(screen.getByRole("article")).not.toHaveTextContent(
+    "Testing Another Heading 1"
+  );
+});
 
 //test img
 
-test('image must have correct source url', () => {
+test("image must have correct source url", () => {
   render(<App />);
-  const img = screen.getByRole('img');
-  const imageLink = 'https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg'
+  const img = screen.getByRole("img");
+  const imageLink =
+    "https://i.pinimg.com/564x/83/7c/c3/837cc3efb59ffe05d7b0ae7f3177151b.jpg";
 
-  expect(img).toHaveAttribute('src', imageLink)
-  expect(img).toHaveAttribute('alt', 'Image')
-})
+  expect(img).toHaveAttribute("src", imageLink);
+  expect(img).toHaveAttribute("alt", "Image");
+});
 
-test('quote renders in a blockquote format', () => {
- const { container } = render(<App />);
- const quote = container.querySelector('blockquote')
+test("quote renders in a blockquote format", () => {
+  const { container } = render(<App />);
+  const quote = container.querySelector("blockquote");
 
-  expect(quote).toHaveTextContent('When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto');
+  expect(quote).toHaveTextContent(
+    "When you give up, your dreams and everything else, they’re gone. Hard work is worthless for those that don’t believe in themselves. – Uzumaki Naruto"
+  );
+});
 
-}) 
+test("the hyperlink displays with correct text and link", () => {
+  render(<App />);
+  const link = "https://flatuicolors.com/palette/ca";
+
+  expect(screen.getByText("choose a color here").closest("a")).toHaveAttribute(
+    "href",
+    link
+  );
+});
