@@ -68,7 +68,7 @@ test("the hyperlink displays with correct text and link", () => {
     link
   );
 });
-//text <li> elements
+// text <li> elements
 // test('displays correct amount of bullet points', () => {
 //   render(<App />);
 //   const expected = [
