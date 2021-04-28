@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mardown_previewer/static/css/main.8487ecaf.chunk.css",
+    "main.js": "/mardown_previewer/static/js/main.f5fe06b1.chunk.js",
+    "main.js.map": "/mardown_previewer/static/js/main.f5fe06b1.chunk.js.map",
+    "runtime-main.js": "/mardown_previewer/static/js/runtime-main.90c29f97.js",
+    "runtime-main.js.map": "/mardown_previewer/static/js/runtime-main.90c29f97.js.map",
+    "static/css/2.ef9168ec.chunk.css": "/mardown_previewer/static/css/2.ef9168ec.chunk.css",
+    "static/js/2.24e312c3.chunk.js": "/mardown_previewer/static/js/2.24e312c3.chunk.js",
+    "static/js/2.24e312c3.chunk.js.map": "/mardown_previewer/static/js/2.24e312c3.chunk.js.map",
+    "index.html": "/mardown_previewer/index.html",
+    "static/css/2.ef9168ec.chunk.css.map": "/mardown_previewer/static/css/2.ef9168ec.chunk.css.map",
+    "static/css/main.8487ecaf.chunk.css.map": "/mardown_previewer/static/css/main.8487ecaf.chunk.css.map",
+    "static/js/2.24e312c3.chunk.js.LICENSE.txt": "/mardown_previewer/static/js/2.24e312c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90c29f97.js",
+    "static/css/2.ef9168ec.chunk.css",
+    "static/js/2.24e312c3.chunk.js",
+    "static/css/main.8487ecaf.chunk.css",
+    "static/js/main.f5fe06b1.chunk.js"
+  ]
+}
